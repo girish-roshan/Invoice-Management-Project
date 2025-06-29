@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Dashboard color palette */
+  --color-primary: 59, 130, 246;        /* Blue */
+  --color-primary-dark: 37, 99, 235;    /* Dark Blue */
+  --color-secondary: 99, 102, 241;      /* Indigo */
+  --color-accent: 139, 92, 246;         /* Purple */
+  --color-success: 34, 197, 94;         /* Green */
+  --color-warning: 234, 179, 8;         /* Amber */
+  --color-danger: 239, 68, 68;          /* Red */
+  --color-info: 6, 182, 212;            /* Cyan */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-50;
+}
+
+/* Authentication pages styling */
+.auth-card {
+  @apply bg-white rounded-xl shadow-lg p-8 w-full max-w-md mx-auto;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Specific styling for input fields with icons */
+.icon-input-left {
+  @apply pl-12 !important;
+}
+
+.icon-input-right {
+  @apply pr-10 !important;
+}
+
+/* Dashboard styling */
+.dashboard-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden;
+}
+
+.dashboard-card-header {
+  @apply p-6 flex justify-between items-center border-b border-gray-100;
+}
+
+.dashboard-card-body {
+  @apply p-6;
+}
+
+.stat-value {
+  @apply text-2xl font-bold;
+}
+
+.stat-label {
+  @apply text-sm text-gray-500 font-medium;
+}
+
+/* Button variations */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center transition duration-150;
+}
+
+.btn-secondary {
+  @apply bg-secondary-600 hover:bg-secondary-700 text-white font-medium py-2 px-4 rounded-lg flex items-center transition duration-150;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg flex items-center hover:bg-gray-50 transition duration-150;
+}
+
+/* Status badges */
+.badge {
+  @apply px-2 py-1 inline-flex items-center text-xs leading-5 font-semibold rounded-full;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-amber-100 text-amber-800;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.badge-default {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.btn-primary {
+  @apply w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 ease-in-out;
+}
+
+.btn-secondary {
+  @apply w-full bg-white hover:bg-gray-100 text-gray-800 font-medium py-3 px-4 rounded-lg border border-gray-300 transition duration-200 ease-in-out flex items-center justify-center;
+}
+
+.divider {
+  @apply flex items-center text-gray-500 my-4;
+}
+
+.divider::before,
+.divider::after {
+  @apply content-[''] flex-1 border-t border-gray-300;
+}
+
+.divider span {
+  @apply px-3;
+}
